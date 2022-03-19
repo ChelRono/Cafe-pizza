@@ -1,9 +1,16 @@
-html{
-    background-image: url("/images/pizza6.jpg");
+body{
+    background-image: url("/images/pizza5.jpg");
     
     height: 620px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    
+}
+.header{
+    text-align: center;
+    font-style: normal;
+    color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
