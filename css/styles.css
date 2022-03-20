@@ -1,5 +1,5 @@
 body{
-    background-image: url(/images/pizza5.jpg);
+    background-image: url("/images/pizza5.jpg");
     
     height: 620px;
     background-position: center;
@@ -16,6 +16,9 @@ body{
 }
 .container{
     color: white
+}
+h5{
+    color: black;
 }
 td{
     width: 150px;
