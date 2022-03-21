@@ -49,28 +49,28 @@
   <h5>Choose pizza size:</h5>
 
 <select name="size" id="size">
-  <option value="small">Small</option>
-  <option value="Medium">Medium</option>
-  <option value="large">large</option>
+  <option label="small" value="750">Small</option>
+  <option label="Medium" value="1000">Medium</option>
+  <option label="large" value="1250">large</option>
 </select>
 <br>
 <h5>Choose pizza toppings:</h5>
 
 <select value="toppings" id="toppings">
-  <option value="small">Olive</option>
-  <option value="Medium">Cheese</option>
-  <option value="large">Pepperoni</option>
-  <option value="large">Mushroom</option>
-  <option value="large">Sausage</option>
-  <option value="large">Pineapple</option>
+  <option label="small" value="100">Olive</option>
+  <option label="Medium" value="120">Cheese</option>
+  <option label="large" value="90">Pepperoni</option>
+  <option label="large" value="100">Mushroom</option>
+  <option label="large" value="90"> Sausage</option>
+  <option label="large" value="80">Pineapple</option>
 </select>
 <br>
 <h5>Choose crust:</h5>
 
 <select name="crust" id="crust">
-  <option value="flatbread">Flatbread</option>
-  <option value="thin crust">Thin crust</option>
-  <option value="stuffed">Stuffed</option>
+  <option label="flatbread" value="100">Flatbread</option>
+  <option label="thin crust" value="120">Thin crust</option>
+  <option label="stuffed" value="90">Stuffed</option>
 </select>
 </div>
 <!-- <span class="btn btn-primary" id="Add order">Add order</span> -->
@@ -90,9 +90,19 @@
 <div class="add-order">
   <button type="submit" class="btn btn-primary">Add order</button>
 </div>
+<br>
+<div class="checkout">
+  <button type="submit" class="btn btn-primary">checkout</button>
+</div>
 <div class="info">
-<h4>Would you want it to be delivered at an additional fee of 150? </h4>
-
+<h5><strong>Would you want it to be delivered at an additional fee of 150?</strong>  </h5>
+<label>
+  <input type="radio" name="yes-no">YES</label>
+  <label>
+    <input type="radio" name="yes-no">NO</label>
+</div>
+<div class="location">
+ <input type="text" placeholder="location"><button class="btn btn-primary">DONE</button>
 </div>
 </div>
 
