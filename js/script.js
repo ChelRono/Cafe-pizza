@@ -1,12 +1,17 @@
 $(document).ready(function() {
-function Pizza(OrderNo, Size, Toppings, Crust, Total) {
-    this.OrderNo = OrderNo;
-    this.Size = Size;
-    this.Toppings = Toppings;
-    this.Crust = Crust;
-    this.Total = Total;
+    $("#add").click(function() {
+        $("#new-order").append(
+            var newRow = '<tr><th scope="row">' + newPizza.orderNo + '</th><td id="size">' + $("#size").text() + " - " + newPizza.size + '</td><td id="toppings">' + $("#toppings").text() + " - " + newPizza.toppings + '</td><td id="crust">' + $("#crust").text() + " - " + newPizza.crust + '</td><td id="total">' + newPizza.total + '</td></tr>'
+            $("#pizza").append(newRow);
+    });
+// function Pizza(OrderNo, Size, Toppings, Crust, Total) {
+//     this.OrderNo = OrderNo;
+//     this.Size = Size;
+//     this.Toppings = Toppings;
+//     this.Crust = Crust;
+//     this.Total = Total;
    
-  }
+//   }
 
 
   $("form#new-contact").submit(function(event) {
@@ -25,4 +30,5 @@ function Pizza(OrderNo, Size, Toppings, Crust, Total) {
     var newRow = 
 
     $("#pizza").append(newRow);
+  });
 });

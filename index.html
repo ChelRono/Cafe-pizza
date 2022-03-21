@@ -11,6 +11,8 @@
 <body>
     
     <div class="container">
+      <div class="col-6">
+        <div class="row">
     <h1 class="header">CAFE PIZZA</h1>
   
 <!-- <h5>Choose pizza size:</h5>
@@ -43,7 +45,7 @@
 
     </form> -->
 
-    <h2>Add order:</h2>
+    <h2>Options:</h2>
     <form id="new-order">
 <div class="form-group">
   <h5>Choose pizza size:</h5>
@@ -76,32 +78,32 @@
 <!-- <span class="btn btn-primary" id="Add order">Add order</span> -->
 <button type="submit" class="btn btn-primary">Order </button>
     </form>
-</div>
+
 <!-- <input type="number" name="" id="">
 <button type="button" class="button" onclick="alert('your order is being prepared')">Order</button> -->
 <table class="table">
   <thead>
     <tr>
-    <td class="col"><strong>OrderNo</strong></td>
-    <td class="col"><strong>Size</strong></td>
-    <td class="col"><strong>Toppings</strong></td>
-    <td class="col"><strong>Crust</strong></td>
-    <td class="col"><strong>Total</strong></td>
+    <th scope="col"><strong>OrderNo</strong></td>
+    <th scope="col"><strong>Size</strong></td>
+    <th scope="col"><strong>Toppings</strong></td>
+    <th scope="col"><strong>Crust</strong></td>
+    <th scope="col"><strong>Total</strong></td>
 </tr>
 </thead>
-<table class="pizza">
-  <tbody>
+</table>
+<tbody id="pizza">
     <tr>
-      <th class="row">1</th>
+      <th scope="row">1</th>
+      <td id="OrderNo"></td>
       <td id="size"></td>
       <td id="toppings"></td>
       <td id="crust"></td>
       <td id="total"></td>
     </tr>
-  </tbody>
-</table>
+</tbody>
 <div class="add-order">
-  <button type="submit" class="btn btn-primary">Add order</button>
+  <button type="submit" class="btn btn-primary" id="add">Add order</button>
 </div>
 <br>
 <div class="checkout">
@@ -117,6 +119,8 @@
 <div class="location">
  <input type="text" placeholder="location"><button class="btn btn-primary">DONE</button>
 </div>
+</div>
+      </div>
 </div>
 
 

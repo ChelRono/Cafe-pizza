@@ -1,5 +1,5 @@
 body{
-    background-image: url("/images/pizza5.jpg");
+    background-image: url("images/pizza5.jpg");
     
     height: 620px;
     background-position: center;
@@ -14,11 +14,14 @@ body{
     color: black;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-.container{
+/* .container{
     color: white
-}
+} */
 h5{
     color: black;
+}
+.table{
+    justify-content: right;
 }
 td{
     width: 150px;
