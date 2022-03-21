@@ -1,70 +1,18 @@
-var data = {
-    pizza :[
-        {
-            id: 1,
-            name: 'Small',
-            price: 750
-        },
-        {
-            id: 2,
-            name: 'Medium',
-            price: 1000
-        },
-        {
-            id: 3,
-            name: 'Large',
-            price: 1250
-        }
-    ],
-         toppings:[
-            {
-                id: 1,
-                name: 'Olive',
-                price: 100
-            },
-            {
-                id: 2,
-                name: 'Cheese',
-                price: 120
-            },
-            {
-                id: 3,
-                name: 'Pepperoni',
-                price: 90
-            },
-            {
-                id: 4,
-                name: 'Mushroom',
-                price: 100
-            },
-            {
-                id: 5,
-                name:'Sausage',
-                price: '90',
-            },
-            {
-                id: 6,
-                name:'Pineapple',
-                price: '80'
-            }
+function Pizza(Size, Toppings, Crust, Total, Order No) {
+    this.Order No = Order No;
+    this.size = Size;
+    this.toppings = Toppings;
+    this.crust = Crust;
+    this.total = Total;
+   
+  }
 
-        ],
-        crust:[
-            {
-                id: 1,
-                name: 'flatbread',
-                price: 100
-            },
-            {
-                id: 2,
-                name: 'thin crust',
-                price: 120
-            },
-            {
-                id: 3,
-                name: 'stuffed',
-                price: 90
-            },
-        ]
-    }
-    
+
+  $('.btn.add-pizza').click(function() {
+    var sizeOfPizza = $(".size option:selected").val();
+    var toppingsOfPizza = $(".toppings option:selected").val();
+    var crustOfPizza = $(".crust option:selected").val();
+    var total = parseInt(sizeOfPizza) + parseInt(toppingsOfPizza) + parseInt(crustOfPizza);
+    order = order + 1;
+    grandTotal = grandTotal + total;
+
