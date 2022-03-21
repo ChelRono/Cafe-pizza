@@ -9,11 +9,11 @@
     <link rel="stylesheet" href="css/bootstrap.css">
 </head>
 <body>
-    
+  <h1 class="header">CAFE PIZZA</h1>
     <div class="container">
       <div class="col-6">
         <div class="row">
-    <h1 class="header">CAFE PIZZA</h1>
+    
   
 <!-- <h5>Choose pizza size:</h5>
 
@@ -45,7 +45,7 @@
 
     </form> -->
 
-    <h2>Options:</h2>
+   
     <form id="new-order">
 <div class="form-group">
   <h5>Choose pizza size:</h5>
@@ -106,7 +106,7 @@
     </tr>
 </tbody>
 <br>
-<div class="add-order">
+<div id="add-order">
   <button type="submit" class="btn btn-primary" id="add">Add order</button>
 </div>
 <br>
@@ -115,10 +115,11 @@
 </div>
 <div class="info">
 <h5><strong>Would you want it to be delivered at an additional fee of 150?</strong>  </h5>
+<h4><strong>Your order has been received!</strong></h4>
 <label>
-  <input type="radio" name="yes-no">YES</label>
+  <input type="radio" id="yes" name="yes-no">YES</label>
   <label>
-    <input type="radio" name="yes-no">NO</label>
+    <input type="radio" id="no" name="yes-no">NO</label>
 </div>
 <div class="location">
  <input type="text" placeholder="location"><button class="btn btn-primary">DONE</button>
