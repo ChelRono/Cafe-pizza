@@ -1,19 +1,12 @@
 
-// $(document).ready(function() {
-//     $("#add").click(function() {
-//         $("#new-order").append(
-//            <tr>
-//       <><th scope="row">1</th><td id="newPizza.OrderNo"></td><td id="newPizza.size"></td><td id="newPizza.toppings"></td><td id="newPizza.crust"></td><td id="newPizza.total"></td></>
-//     </tr>)
-    
-//     });
-$(".table").hide();
+$("table").hide();
 $(".info").hide();
 $("#yes").hide();
 $("#no").hide();
-$(".info h4").hide();
+$(".received").hide();
 
-$('.btn btn-primary').click(function() {
+
+$('#order').click(function() {
   var sizeOfPizza = $("#size").val();
   var toppingsOfPizza = $("#toppings").val();
   var crustOfPizza = $("#crust").val();
@@ -22,25 +15,26 @@ $('.btn btn-primary').click(function() {
   var grandTotal = 0;
 
   $("table").show();
-  $(".additional-buttons").show();
-  $(".btn.order").hide();
+  $("#order").hide();
 
-  $("#size").html($(".size option:selected").text() + " - " + sizeOfPizza);
-  $("#toppings").html($(".toppings option:selected").text() + " - " + toppingsOfPizza);
-  $("#crust").html($(".crust option:selected").text() + " - " + crustOfPizza);
+  $("#Size").html($("Size").text() + " - " + sizeOfPizza);
+  $("#Toppings").html($("#Toppings").text() + " - " + toppingsOfPizza);
+  $("#Crust").html($("#Crust").text() + " - " + crustOfPizza);
   $("#total").html(total);
 
-function Pizza(OrderNo, Size, Toppings, Crust, Total) {
-    this.OrderNo = OrderNo;
-    this.Size = Size;
-    this.Toppings = Toppings;
-    this.Crust = Crust;
-    this.Total = Total;
-   
+  class Order {
+    constructor(OrderNo, Size, Toppings, Crust, total) {
+      this.OrderNo = OrderNo;
+      this.Size = Size;
+      this.Toppings = Toppings;
+      this.Crust = Crust;
+      this.Total = total;
+
+    }
   }
 
 
-  $("#add-order").submit(function(event) {
+  $("#new-order").submit(function(event) {
     event.preventDefault();
 
     var inputtedSize = $("#size").val();
@@ -52,41 +46,43 @@ function Pizza(OrderNo, Size, Toppings, Crust, Total) {
 
 
 
-    var newOrder = new Pizza (parseInt(inputtedSize) + parseInt(inputtedToppings) + parseIn(inputtedCrust));
+    newOrder = new Order (parseInt(inputtedSize) + parseInt(inputtedToppings) + parseInt(inputtedCrust));
     order = order + 1;
     grandTotal = grandTotal + total;
 
-    newOrder = new Pizza(inputtedSize, inputtedToppings, inputtedCrust, total, order);
+    newOrder = new Order(inputtedSize, inputtedToppings, inputtedCrust, total, order);
 
-    var newRow = '<tr><th scope="row">' + newPizza.orderNo + '</th><td id="size">' + $(".size option:selected").text() + " - " + newPizza.size + '</td><td id="toppings">' + $(".toppings option:selected").text() + " - " + newPizza.toppings + '</td><td id="crust">' + $(".crust option:selected").text() + " - " + newPizza.crust + '</td><td id="total">' + newPizza.total + '</td></tr>'
+    var newRow = '<tr><th scope="row">' + newOrder.orderNo + '</th><td id="Size">' + $("#Size").text() + " - " + newOrder.Size + '</td><td id="Toppings">' + $("#Toppings").text() + " - " + newOrder.Toppings + '</td><td id="Crust">' + $("#Crust").text() + " - " + newOrder.Crust + '</td><td id="Total">' + newOrder.Total + '</td></tr>'
 
     $("#pizza").append(newRow);
    
   });
 
-  $(".btn.check-out").click(function() {
+  $("#checkout").click(function() {
     $("#add-order").hide();
-    $(".btn.check-out").hide();
+    $("#checkout").hide();
     $(".info").show();
     $(".location").hide();
     grandTotal = grandTotal + total;
   });
   $("#yes").click(function() {
-    $(".info h5").hide();
+    $(".delivery").hide();
     $("#yes").hide();
     $("#no").hide();
     $(".location").show();
-    $(".additional-info h3 span").html(grandTotal + 150);
+    (grandTotal + 150);
   });
   $("#yes").click(function() {
-    $(".info h5").hide();
+    $("delivery").hide();
     $("#yes").hide();
     $("#no").hide();
     $(".location").show();
   });
-  $("btn btn-primary").click(function() {
-    var location = $(".location input").val();
-    $(".info h4").show();
+  $("#done").click(function() {
+    var location = $(".location").val();
+    $(".received").show();
     $(".location").hide();
-    // $(".additional-info h4 span").html(location);
+    $(".received ").html(location);
   });
+  
+});

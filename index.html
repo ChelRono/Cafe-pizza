@@ -78,7 +78,7 @@
 <!-- <span class="btn btn-primary" id="Add order">Add order</span> -->
 <div>
   <input name="quantity" type="number" min="1" placeholder="">
-<button type="submit" class="btn btn-primary">Order </button>
+<input type="submit" class="btn btn-primary" value="order"  id="order"> 
 </div>
     </form>
 
@@ -99,10 +99,10 @@
     <tr>
       <th scope="row">1</th>
       <td id="OrderNo"></td>
-      <td id="size"></td>
-      <td id="toppings"></td>
-      <td id="crust"></td>
-      <td id="total"></td>
+      <td id="Size"></td>
+      <td id="Toppings"></td>
+      <td id="Crust"></td>
+      <td id="Total"></td>
     </tr>
 </tbody>
 <br>
@@ -111,18 +111,18 @@
 </div>
 <br>
 <div class="checkout">
-  <button type="submit" class="btn btn-primary">checkout</button>
+  <button type="submit" class="btn btn-primary" id="checkout">checkout</button>
 </div>
 <div class="info">
-<h5><strong>Would you want it to be delivered at an additional fee of 150?</strong>  </h5>
-<h4><strong>Your order has been received!</strong></h4>
+<h5 class="delivery"><strong>Would you want it to be delivered at an additional fee of 150?</strong>  </h5>
+<h4 class="received"><strong>Your order has been received!</strong></h4>
 <label>
   <input type="radio" id="yes" name="yes-no">YES</label>
   <label>
     <input type="radio" id="no" name="yes-no">NO</label>
 </div>
 <div class="location">
- <input type="text" placeholder="location"><button class="btn btn-primary">DONE</button>
+ <input type="text" placeholder="location"><button class="btn btn-primary" id="done">DONE</button>
 </div>
 </div>
       </div>
