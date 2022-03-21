@@ -12,7 +12,7 @@
     
     <div class="container">
     <h1 class="header">CAFE PIZZA</h1>
-    <form>
+    <form class="order">
     <h5>Choose your preference:</h5>
   
 <h5>Choose pizza size:</h5>
@@ -42,11 +42,45 @@
   <option value="stuffed">Stuffed</option>
 </select>
 <br>
-<input type="number" name="" id="">
-<button type="button" class="button" onclick="alert('your order is being prepared')">Order</button>
+
+    </form>
+
+    <h2>Add order:</h2>
+    <form id="new-order">
+<div class="form-group">
+  <h5>Choose pizza size:</h5>
+
+<select name="size" id="size">
+  <option value="small">Small</option>
+  <option value="Medium">Medium</option>
+  <option value="large">large</option>
+</select>
+<br>
+<h5>Choose pizza toppings:</h5>
+
+<select value="toppings" id="toppings">
+  <option value="small">Olive</option>
+  <option value="Medium">Cheese</option>
+  <option value="large">Pepperoni</option>
+  <option value="large">Mushroom</option>
+  <option value="large">Sausage</option>
+  <option value="large">Pineapple</option>
+</select>
+<br>
+<h5>Choose crust:</h5>
+
+<select name="crust" id="crust">
+  <option value="flatbread">Flatbread</option>
+  <option value="thin crust">Thin crust</option>
+  <option value="stuffed">Stuffed</option>
+</select>
+</div>
+<span class="btn btn-primary" id="Add order">Add order</span>
+<button type="submit" class="btn">Add</button>
     </form>
 </div>
-
+<input type="number" name="" id="">
+<button type="button" class="button" onclick="alert('your order is being prepared')">Order</button>
 <div class="checkout">
 <tr>
     <td class="col"><strong>Order No.</strong></td>
