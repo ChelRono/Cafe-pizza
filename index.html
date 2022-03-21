@@ -79,14 +79,27 @@
 </div>
 <!-- <input type="number" name="" id="">
 <button type="button" class="button" onclick="alert('your order is being prepared')">Order</button> -->
-<div class="checkout">
-<tr>
-    <td class="col"><strong>Order-No.</strong></td>
+<table class="table">
+  <thead>
+    <tr>
+    <td class="col"><strong>OrderNo</strong></td>
     <td class="col"><strong>Size</strong></td>
     <td class="col"><strong>Toppings</strong></td>
     <td class="col"><strong>Crust</strong></td>
     <td class="col"><strong>Total</strong></td>
 </tr>
+</thead>
+<table class="pizza">
+  <tbody>
+    <tr>
+      <th class="row">1</th>
+      <td id="size"></td>
+      <td id="toppings"></td>
+      <td id="crust"></td>
+      <td id="total"></td>
+    </tr>
+  </tbody>
+</table>
 <div class="add-order">
   <button type="submit" class="btn btn-primary">Add order</button>
 </div>
