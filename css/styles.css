@@ -35,12 +35,13 @@ td{
     justify-content: right;
 
 }
-#add-order{
+#add{
     display: none;
+    bottom: 20%;
 }
 .location{
     display: none;
 }
-.info h4{
+.received{
     display: none;
 }
