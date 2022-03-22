@@ -1,5 +1,5 @@
 
-$("table").hide();
+$(".table").hide();
 $(".info").hide();
 $("#yes").hide();
 $("#no").hide();
@@ -14,24 +14,22 @@ $('#order').click(function() {
   var order = 1;
   var grandTotal = 0;
 
-  $("table").show();
+  $(".table").show();
   $("#order").hide();
 
-  $("#Size").html($("Size").text() + " - " + sizeOfPizza);
-  $("#Toppings").html($("#Toppings").text() + " - " + toppingsOfPizza);
-  $("#Crust").html($("#Crust").text() + " - " + crustOfPizza);
+  $("#size").html($("#size").text() + " - " + sizeOfPizza);
+  $("#toppings").html($("#toppings").text() + " - " + toppingsOfPizza);
+  $("#crust").html($("#crust").text() + " - " + crustOfPizza);
   $("#total").html(total);
 
-  class Order {
-    constructor(OrderNo, Size, Toppings, Crust, total) {
+  function order (OrderNo, Size, Toppings, Crust, total) {
       this.OrderNo = OrderNo;
-      this.Size = Size;
-      this.Toppings = Toppings;
-      this.Crust = Crust;
-      this.Total = total;
-
-    }
+      this.size = Size;
+      this.toppings = Toppings;
+      this.crust = Crust;
+      this.total = total;
   }
+  
 
 
   $("#new-order").submit(function(event) {
