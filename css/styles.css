@@ -14,9 +14,9 @@ body{
     color: black;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-/* .container{
+.container{
     color: white
-} */
+}
 h5{
     color: black;
 }
@@ -30,12 +30,13 @@ td{
     padding: 10px;
     
 }
-/* .checkout{
+
+.checkout{
     display: none;
     justify-content: right;
 
 }
-#add{
+#add-order{
     display: none;
     bottom: 20%;
 }
@@ -44,4 +45,4 @@ td{
 }
 .received{
     display: none;
-} */
+}

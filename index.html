@@ -64,7 +64,7 @@
 </table>
 <tbody id="pizza">
     <tr>
-      <th scope="row">1</th>
+      <th scope="row"></th>
       <td id="OrderNo"></td>
       <td id="Size"></td>
       <td id="Toppings"></td>
@@ -73,29 +73,32 @@
     </tr>
 </tbody>
 <br>
-<div class="additional-buttons">
-<div id="add-order">
-  <button type="submit" class="btn btn-primary" id="add">Add order</button>
-</div>
+<div class="additional-info">
+  
+  <button type="submit" class="btn btn-primary" id="add-order">Add order</button>
 <br>
-<div class="checkout">
-  <button type="submit" class="btn btn-primary" id="checkout">checkout</button>
+<button type="submit" class="btn btn-primary" id="checkout">checkout</button>
 </div>
 <div class="info">
 <h5 class="delivery"><strong>Would you want it to be delivered at an additional fee of 150?</strong>  </h5>
-<h4 class="received"><strong>Your order has been received!</strong></h4>
+<!-- <h4 class="received"><strong>Your order has been received!</strong></h4> -->
 <label>
-  <input type="radio" id="yes" name="yes-no">YES</label>
+  <input type="radio" id="yes" >YES</label>
   <label>
-    <input type="radio" id="no" name="yes-no">NO</label>
+    <input type="radio" id="no" >NO</label>
+
+
+<input type="text" placeholder="location" class="location"><button class="btn btn-primary" id="done">DONE</button>
+
 </div>
-<div class="location">
- <input type="text" placeholder="location"><button class="btn btn-primary" id="done">DONE</button>
 </div>
 </div>
-      </div>
+ 
+
 </div>
-    </div>
+      
+
+    
 
 
     <script src="js/jquery-3.6.0.js"></script>
