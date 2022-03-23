@@ -21,16 +21,27 @@ h5{
     color: black;
 }
 .table{
+    display: none;
     justify-content: right;
 }
-td{
-    width: 150px;
-    text-align: center;
-    border: 1px solid black;
-    padding: 10px;
-    
+.additional-info{
+    display: none;
 }
-
+.info{
+    display: none;
+}
+.received{
+    display: none;
+}
+#yes{
+    display: none;
+}
+#no{
+    display: none;
+}
+.location{
+    display: none;
+}
 .checkout{
     display: none;
     justify-content: right;
@@ -40,9 +51,12 @@ td{
     display: none;
     bottom: 20%;
 }
-.location{
-    display: none;
+td{
+    width: 150px;
+    text-align: center;
+    border: 1px solid black;
+    padding: 10px;
+    
 }
-.received{
-    display: none;
-}
+
+

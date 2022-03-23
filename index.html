@@ -1,107 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cafe pizza</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cafe pizza</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
 </head>
+
 <body>
   <h1 class="header">CAFE PIZZA</h1>
-    <div class="container">
+  <div class="container">
+    <div class="row">
       <div class="col-6">
-        <div class="row">
-    <form id="new-order">
-<div class="form-group">
-  <h5>Choose pizza size:</h5>
 
-<select class="form-control size">
-  <option label="small" value="750">Small</option>
-  <option label="Medium" value="1000">Medium</option>
-  <option label="large" value="1250">large</option>
-</select>
-<br>
-<h5>Choose pizza toppings:</h5>
+        <form id="new-order">
+          <div class="form-group">
+            <h5>Choose pizza size:</h5>
 
-<select class="form-control toppings">
-  <option label="Olive" value="100">Olive</option>
-  <option label="Cheese" value="120">Cheese</option>
-  <option label="Pepperoni" value="90">Pepperoni</option>
-  <option label="mushroom" value="100">Mushroom</option>
-  <option label="Sausage" value="90"> Sausage</option>
-  <option label="Pineapple" value="80">Pineapple</option>
-</select>
-<br>
-<h5>Choose crust:</h5>
+            <select class="size">
+              <option label="small" value="750">Small</option>
+              <option label="Medium" value="1000">Medium</option>
+              <option label="large" value="1250">large</option>
+            </select>
+            <br>
+            <h5>Choose pizza toppings:</h5>
 
-<select class="form-control crust">
-  <option label="flatbread" value="100">Flatbread</option>
-  <option label="thin crust" value="120">Thin crust</option>
-  <option label="stuffed" value="90">Stuffed</option>
-</select>
-</div>
+            <select class="toppings">
+              <option label="Olive" value="100">Olive</option>
+              <option label="Cheese" value="120">Cheese</option>
+              <option label="Pepperoni" value="90">Pepperoni</option>
+              <option label="mushroom" value="100">Mushroom</option>
+              <option label="Sausage" value="90"> Sausage</option>
+              <option label="Pineapple" value="80">Pineapple</option>
+            </select>
+            <br>
+            <h5>Choose crust:</h5>
 
-<div>
-  <input name="quantity" type="number" min="1" placeholder="">
-<input type="submit" class="btn btn-primary" value="order"  id="order"> 
-</div>
+            <select class="crust">
+              <option label="flatbread" value="100">Flatbread</option>
+              <option label="thincrust" value="120">Thincrust</option>
+              <option label="stuffed" value="90">Stuffed</option>
+            </select>
+          </div>
 
-    </form>
+          <div>
+            <input type="number" min="1" placeholder="" id="number-pizza">
+            <input type="submit" class="btn btn-primary" value="order" id="order1">
+          </div>
 
-
-<table class="table">
-  <thead>
-    <tr>
-    <th scope="col"><strong>OrderNo</strong></td>
-    <th scope="col"><strong>Size</strong></td>
-    <th scope="col"><strong>Toppings</strong></td>
-    <th scope="col"><strong>Crust</strong></td>
-    <th scope="col"><strong>Total</strong></td>
-</tr>
-</thead>
-</table>
-<tbody id="pizza">
-    <tr>
-      <th scope="row"></th>
-      <td id="OrderNo"></td>
-      <td id="Size"></td>
-      <td id="Toppings"></td>
-      <td id="Crust"></td>
-      <td id="Total"></td>
-    </tr>
-</tbody>
-<br>
-<div class="additional-info">
-  
-  <button type="submit" class="btn btn-primary" id="add-order">Add order</button>
-<br>
-<button type="submit" class="btn btn-primary" id="checkout">checkout</button>
-</div>
-<div class="info">
-<h5 class="delivery"><strong>Would you want it to be delivered at an additional fee of 150?</strong>  </h5>
-<!-- <h4 class="received"><strong>Your order has been received!</strong></h4> -->
-<label>
-  <input type="radio" id="yes" >YES</label>
-  <label>
-    <input type="radio" id="no" >NO</label>
+        </form>
 
 
-<input type="text" placeholder="location" class="location"><button class="btn btn-primary" id="done">DONE</button>
-
-</div>
-</div>
-</div>
- 
-
-</div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col"><strong>OrderNo</strong></td>
+              <th scope="col"><strong>Size</strong></td>
+              <th scope="col"><strong>Toppings</strong></td>
+              <th scope="col"><strong>Crust</strong></td>
+              <th scope="col"><strong>Total</strong></td>
+            </tr>
+          </thead>
       
+        <tbody id="pizza">
+          <tr>
+              <td id="orderNo"></td>
+              <td id="size"></td>
+              <td id="toppings"></td>
+              <td id="crust"></td>
+              <td id="total"></td>  
+          </tr>
+        </tbody>
+        </table>
+        <br>
+        <div class="additional-info">
 
-    
+          <button type="submit" class="btn btn-primary" id="add-order">Add order</button>
+          <br>
+          <button type="submit" class="btn btn-primary" id="checkout">checkout</button>
+        </div>
+        <div class="info">
+          <h5 class="delivery"><strong>Would you want it to be delivered at an additional fee of 150?</strong> </h5>
+          <!-- <h4 class="received"><strong>Your order has been received!</strong></h4> -->
+          <label>
+            <input type="radio" id="yes">yes</label>
+          <label>
+            <input type="radio" id="no">NO</label>
 
 
-    <script src="js/jquery-3.6.0.js"></script>
-    <script src="js/script.js"></script>
+          <input type="text" placeholder="location" class="location">
+          <button class="btn btn-primary" id="done">DONE</button>
+
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+
+
+
+
+  <script src="js/jquery-3.6.0.js"></script>
+  <script src="js/script.js"></script>
 </body>
+
 </html>
