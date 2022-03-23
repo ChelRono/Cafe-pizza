@@ -24,16 +24,14 @@ $(document).ready(function() {
     var grandTotal = 0;
 
     $(".table").show();
-    $("#add-order").show();
+
+    $(".additional-info").show();
     $("#order1").hide();
 
-  
-
-    $(".size option:selected").text();
-  
-    $(".toppings option:selected").text();
-  
-    $(".crust option:selected").text();
+    $("#orderNo").text(order);
+    $("#size").text($(".size option:selected").text());
+    $("#toppings").text($(".toppings option:selected").text());
+    $("#crust").text($(".crust option:selected").text());
   
     $("#total").html(total);
     
@@ -48,10 +46,13 @@ $(document).ready(function() {
     }
   $('#add-order').click(function(event) {
     event.preventDefault();
-    var sizeOfPizza = $(".size option:selected").val();
-    var toppingsOfPizza = $(".toppings option:selected").val();
-    var crustOfPizza = $(".crust option:selected").val();
-    var total = parseInt(sizeOfPizza) + parseInt(toppingsOfPizza) + parseInt(crustOfPizza);
+    var sizeOfPizza = parseInt($(".size option:selected").val());
+    var toppingsOfPizza = parseInt($(".toppings option:selected").val());
+    var crustOfPizza = parseInt($(".crust option:selected").val());
+    var numberOfPizza = parseInt($("#number-pizza").val());
+
+
+    var total = (sizeOfPizza + toppingsOfPizza + crustOfPizza)*numberOfPizza;
     order = order + 1;
     grandTotal = grandTotal + total;
     
@@ -81,21 +82,20 @@ $(document).ready(function() {
     $("#yes").hide();
     $("#no").hide();
     $(".location").show();
-    (grandTotal + 150);
+    grandTotal += 150;
   });
   $("#no").click(function() {
     $(".delivery").hide();
     $("#yes").hide();
     $("#no").hide();
-    $(".location").show();
-    alert("Your order is ready!")
+    alert("Your order is ready! Your GRAND TOTAL is khs " + grandTotal)
   });
   $("#done").click(function() {
     var location = $(".location").val();
     $(".received").show();
     $(".location").hide();
     $(".received ").html(location);
-    alert("Your order will be dispatched to you shortly!")
+    alert("Your order will be dispatched to you shortly! Your GRAND TOTAL is khs " + grandTotal)
   });
 });
 
